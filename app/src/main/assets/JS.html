@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Carson_Ho</title>
+    <h1 id="h1">JS获取Android方法</h1>
+
+    <script>
+
+    function callAndroid(){
+    // 由于对象映射，所以调用test对象等于调用Android映射的对象
+        androidtoJs.hello("js调用了android中的hello方法")
+     }
+    function callAndroidTwo(){
+        //步骤1：在JS约定所需要的Url协议
+        /*约定的url协议为：js://webview?arg1=111&arg2=222*/
+        document.location = "js://webview?arg1=111&arg2=222"
+     }
+
+    function callAndroidThree(){
+        // 调用prompt（）
+        var result = prompt("js://demo?name=Evan&age=22")
+        alert(result)
+     }
+
+
+
+    </script>
+
+</head>
+<body>
+
+<input type="button" onclick="callAndroid()" value="JS获取Android方法:方法一"/>
+<input type="button" onclick="callAndroidTwo()" value="JS获取Android方法:方法二"/>
+<input type="button" onclick="callAndroidThree()" value="JS获取Android方法:方法三"/>
+</body>
+</html>

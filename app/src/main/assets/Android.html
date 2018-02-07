@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<div style="background-color:green;
+    width:screen.availWidth;
+    height:screen.availHeight;
+    padding:10px;
+    color:#ffffff;">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Carson_Ho</title>
+        <h3 id="h1">Android获取JS方法</h3>
+
+        <script>
+        function callJS(){
+            alert("Android调用了JS的callJS方法");
+         }
+        function callJS(msg){
+            alert("成功："+msg)
+            return "callJS返回"
+         }
+
+        function changeTextColor(){
+            document.getElementById("h1").innerHTML = "修改成功"
+            return "changeTextColor返回"
+        }
+
+
+        function disp_prompt(){
+            var name = prompt("请输入您的名字","Bill Gates")
+            if (name != null && name != ""){
+                document.getElementById("h1").innerHTML =("你好！" + name + " 今天过得怎么样？")
+            }
+         }
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+    </head>
+    <body bgcolor="#ffff00">
+    <input type="button" onclick="disp_prompt()" value="显示提示框"/>
+
+
+    </body>
+</div>
+</html>
